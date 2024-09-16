@@ -1,7 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:lainisha/lainisha.dart';
 
+/// A stateful widget that serves as the home page for the Lainisha Admin
+/// panel. It provides a sidebar navigation for selecting resources and
+/// displays the corresponding resource view.
+///
+/// It takes a [dataProvider] for fetching data, a list of [resources], 
+/// an optional [dashboard] widget, and a [title] for the app.
 class LainishaHomePage extends StatefulWidget {
+  /// Creates a [LainishaHomePage] with the given [dataProvider], [resources],
+  /// [title], and optional [dashboard] widget.
+  ///
+  /// [dataProvider] is used to fetch data for the resources.
+  /// [resources] is the list of resources available in the sidebar.
+  /// [title] is the title of the app.
+  /// [dashboard] is an optional widget to be displayed on the home page.
   const LainishaHomePage({
     required this.dataProvider,
     required this.resources,
@@ -9,9 +22,17 @@ class LainishaHomePage extends StatefulWidget {
     super.key,
     this.dashboard,
   });
+
+  /// The data provider used to fetch data for the resources.
   final DataProvider dataProvider;
+
+  /// The list of resources available in the sidebar.
   final List<Resource> resources;
+
+  /// An optional widget to be displayed on the home page.
   final Widget? dashboard;
+
+  /// The title of the app.
   final String title;
 
   @override
@@ -26,7 +47,7 @@ class _LainishaHomePageState extends State<LainishaHomePage> {
     // App structure
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Lainisha Admin'),
+        title: Text(widget.title),
       ),
       drawer: Drawer(
         child: ListView(

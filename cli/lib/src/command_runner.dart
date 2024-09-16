@@ -8,7 +8,8 @@ import 'package:pub_updater/pub_updater.dart';
 
 const executableName = 'setup';
 const packageName = 'lainisha_cli';
-const description = 'CLI tool to setup Flutter projects with Lainisha Admin Framework';
+const description =
+    'CLI tool to setup Flutter projects with Lainisha Admin Framework';
 
 /// {@template lainisha_cli_command_runner}
 /// A [CommandRunner] for the CLI.

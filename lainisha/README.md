@@ -1,67 +1,55 @@
-# Lainisha
+# Lainisha: A Cross-Platform, Open-Source Admin Framework for Flutter
 
-[![style: very good analysis][very_good_analysis_badge]][very_good_analysis_link]
-[![Powered by Mason](https://img.shields.io/endpoint?url=https%3A%2F%2Ftinyurl.com%2Fmason-badge)](https://github.com/felangel/mason)
-[![License: MIT][license_badge]][license_link]
 
-A Cross-Platform, Open-Source Admin Framework for Flutter
+<a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-purple.svg" alt="License: MIT"></a>
+<a href="https://github.com/kevinomyonga/lainisha-admin-framework"><img src="https://img.shields.io/github/stars/kevinomyonga/lainisha-admin-framework.svg?style=flat&logo=github&colorB=deeppink&label=stars" alt="Star on Github"></a>
 
-## Installation 💻
+Lainisha is an open-source admin panel framework designed to simplify and 
+streamline management tasks across mobile, web, and desktop platforms. 
+Built with Flutter, it offers seamless integration with APIs like REST, 
+GraphQL, and SOAP, making it an ideal choice for developers who want a 
+unified solution for their admin interfaces.
 
-**❗ In order to start using Lainisha you must have the [Flutter SDK][flutter_install_link] installed on your machine.**
+Lainisha is flexible, easy to customize, and adheres to Material 3 design 
+principles, providing a modern, responsive, and user-friendly UI. Whether 
+you're managing content, users, or analytics, Lainisha enables efficient 
+and intuitive control in a single, powerful toolkit.
 
-Install via `flutter pub add`:
+## Origin of the Name
 
-```sh
-dart pub add lainisha
-```
+The word "Lainisha" is derived from Swahili, meaning "to make something 
+clear or to clarify." This reflects the core mission of the framework: 
+to simplify and clarify the development of admin interfaces, providing a 
+clear and intuitive solution for managing complex tasks across platforms.
 
----
+## Features
+- **Cross-platform support**: Works on Android, iOS, Web, Linux, macOS, 
+  and Windows.
+- **API-ready**: Easily integrate with REST, GraphQL, or SOAP services.
+- **Extensible**: Customize the panel to fit your specific needs with ease.
+- **Material 3 design**: Ensures a modern, responsive, and clean user 
+  interface.
 
-## Continuous Integration 🤖
+## Contributors
 
-Lainisha comes with a built-in [GitHub Actions workflow][github_actions_link] powered by [Very Good Workflows][very_good_workflows_link] but you can also add your preferred CI/CD solution.
+Lainisha is an open-source project that thrives on community contributions. 
+We welcome developers of all experience levels to help enhance the framework. 
+Whether you're fixing bugs, adding new features, or improving documentation, 
+your contributions are valuable.
 
-Out of the box, on each pull request and push, the CI `formats`, `lints`, and `tests` the code. This ensures the code remains consistent and behaves correctly as you add functionality or make changes. The project uses [Very Good Analysis][very_good_analysis_link] for a strict set of analysis options used by our team. Code coverage is enforced using the [Very Good Workflows][very_good_coverage_link].
+Feel free to fork the repository, submit pull requests, or join discussions. 
+Together, we can continue to make Lainisha a powerful tool for developers 
+around the world.
 
----
+For contribution guidelines and how to get started, visit our 
+[Contributing](../CONTRIBUTING.md) page.
 
-## Running Tests 🧪
+## Maintainer
 
-For first time users, install the [very_good_cli][very_good_cli_link]:
+[![GitHub Kevin Omyonga](https://github.com/kevinomyonga.png?size=100)](https://github.com/kevinomyonga)  
+**Kevin Omyonga**  
+[Website](https://kevinomyonga.com) | [Twitter](https://twitter.com/kevinomyonga)
 
-```sh
-dart pub global activate very_good_cli
-```
+If you like this project, consider supporting its development:
 
-To run all unit tests:
-
-```sh
-very_good test --coverage
-```
-
-To view the generated coverage report you can use [lcov](https://github.com/linux-test-project/lcov).
-
-```sh
-# Generate Coverage Report
-genhtml coverage/lcov.info -o coverage/
-
-# Open Coverage Report
-open coverage/index.html
-```
-
-[flutter_install_link]: https://docs.flutter.dev/get-started/install
-[github_actions_link]: https://docs.github.com/en/actions/learn-github-actions
-[license_badge]: https://img.shields.io/badge/license-MIT-blue.svg
-[license_link]: https://opensource.org/licenses/MIT
-[logo_black]: https://raw.githubusercontent.com/VGVentures/very_good_brand/main/styles/README/vgv_logo_black.png#gh-light-mode-only
-[logo_white]: https://raw.githubusercontent.com/VGVentures/very_good_brand/main/styles/README/vgv_logo_white.png#gh-dark-mode-only
-[mason_link]: https://github.com/felangel/mason
-[very_good_analysis_badge]: https://img.shields.io/badge/style-very_good_analysis-B22C89.svg
-[very_good_analysis_link]: https://pub.dev/packages/very_good_analysis
-[very_good_cli_link]: https://pub.dev/packages/very_good_cli
-[very_good_coverage_link]: https://github.com/marketplace/actions/very-good-coverage
-[very_good_ventures_link]: https://verygood.ventures
-[very_good_ventures_link_light]: https://verygood.ventures#gh-light-mode-only
-[very_good_ventures_link_dark]: https://verygood.ventures#gh-dark-mode-only
-[very_good_workflows_link]: https://github.com/VeryGoodOpenSource/very_good_workflows
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-%23FFDD00?style=flat&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/KevinOmyonga)

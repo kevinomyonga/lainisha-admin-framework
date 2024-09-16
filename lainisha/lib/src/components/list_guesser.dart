@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
 
+/// A widget that displays a paginated list of data, automatically guessing
+/// the data's structure and rendering it in a table format.
 class ListGuesser extends StatefulWidget {
+  /// Creates a [ListGuesser] widget.
+  ///
+  /// [data] is the list of dynamic data to be displayed in the table.
   const ListGuesser({required this.data, super.key});
+
+  /// The list of dynamic data to be paginated and displayed.
   final List<dynamic> data;
 
   @override
-  _ListGuesserState createState() => _ListGuesserState();
+  State<ListGuesser> createState() => _ListGuesserState();
 }
 
 class _ListGuesserState extends State<ListGuesser> {
@@ -19,6 +26,7 @@ class _ListGuesserState extends State<ListGuesser> {
     paginateData();
   }
 
+  /// Paginate the data into pages of [_itemsPerPage] size.
   void paginateData() {
     final typedData = widget.data.cast<Map<String, dynamic>>();
     final start = _currentPage * _itemsPerPage;
@@ -31,6 +39,9 @@ class _ListGuesserState extends State<ListGuesser> {
     });
   }
 
+  /// Change to a new page and repaginate the data.
+  ///
+  /// [newPage] is the page index to change to.
   void onPageChanged(int newPage) {
     setState(() {
       _currentPage = newPage;
@@ -38,6 +49,9 @@ class _ListGuesserState extends State<ListGuesser> {
     });
   }
 
+  /// Change the number of items per page and reset to the first page.
+  ///
+  /// [newValue] is the new number of items per page.
   void onItemsPerPageChanged(int? newValue) {
     if (newValue != null) {
       setState(() {
@@ -55,7 +69,8 @@ class _ListGuesserState extends State<ListGuesser> {
     }
 
     final typedData = widget.data.cast<Map<String, dynamic>>();
-    final keys = typedData.isNotEmpty ? typedData.first.keys.toList() : [];
+    final keys =
+        typedData.isNotEmpty ? typedData.first.keys.toList() : <dynamic>[];
     final totalItems = typedData.length;
     final totalPages = (totalItems / _itemsPerPage).ceil();
 
@@ -105,8 +120,9 @@ class _ListGuesserState extends State<ListGuesser> {
                 rows: paginatedData.map((item) {
                   return DataRow(
                     cells: keys
-                        .map((key) =>
-                            DataCell(Text(item[key]?.toString() ?? '')))
+                        .map(
+                          (key) => DataCell(Text(item[key]?.toString() ?? '')),
+                        )
                         .toList(),
                   );
                 }).toList(),

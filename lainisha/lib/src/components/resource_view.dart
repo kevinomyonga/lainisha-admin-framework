@@ -7,7 +7,15 @@ import 'package:open_filex/open_filex.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:pdf/widgets.dart' as pw;
 
+/// A widget to manage and view resources, with options to create, edit, and
+/// export resource data in CSV and PDF formats.
 class ResourceView extends StatefulWidget {
+  /// Creates a [ResourceView] widget.
+  ///
+  /// [resource] defines the resource being viewed/managed.
+  /// [dataProvider] is the source for fetching data.
+  /// [createFormBuilder] builds the form for creating a new resource.
+  /// [editFormBuilder] builds the form for editing an existing resource.
   const ResourceView({
     required this.resource,
     required this.dataProvider,
@@ -15,14 +23,22 @@ class ResourceView extends StatefulWidget {
     this.editFormBuilder,
     super.key,
   });
+
+  /// The resource being managed in this view.
   final Resource resource;
+
+  /// The provider used to fetch the data for the resource.
   final DataProvider dataProvider;
+
+  /// The widget builder for creating a new resource.
   final Widget Function(BuildContext context)? createFormBuilder;
+
+  /// The widget builder for editing an existing resource.
   final Widget Function(BuildContext context, Map<String, dynamic> item)?
       editFormBuilder;
 
   @override
-  _ResourceViewState createState() => _ResourceViewState();
+  State<ResourceView> createState() => _ResourceViewState();
 }
 
 class _ResourceViewState extends State<ResourceView> {

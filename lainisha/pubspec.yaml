@@ -1,11 +1,19 @@
 name: lainisha
-description: A Cross-Platform, Open-Source Admin Framework for Flutter
-version: 2024.9.0+1
-publish_to: none
+description: A Cross-Platform, Open-Source Admin Framework for Flutter, Designed To Work Seamlessly On Android, iOS, Linux, MocOS, Web And Windows.
+version: 2024.9.0
+homepage: "https://github.com/kevinomyonga/lainisha-admin-framework"
+repository: "https://github.com/kevinomyonga/lainisha-admin-framework"
+
+funding:
+  - https://www.buymeacoffee.com/KevinOmyonga
+
+topics:
+  - admin
+  - framework
 
 environment:
   sdk: ^3.5.0
-  flutter: ^3.24.0
+  flutter: '>=3.24.0'
 
 dependencies:
   adaptive_chameleon_theme: ^2024.9.0

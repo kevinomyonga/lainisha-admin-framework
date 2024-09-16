@@ -1,9 +1,22 @@
 import 'package:dio/dio.dart';
 import 'package:lainisha/lainisha.dart';
 
+/// A concrete implementation of [DataProvider] using the Dio package for
+/// making HTTP requests.
+/// 
+/// This class provides methods to interact with RESTful APIs, allowing
+/// for fetching lists, single items, creating, updating, and deleting
+/// resources.
 class RestDataProvider implements DataProvider {
+  /// Creates a [RestDataProvider] with the given [baseUrl].
+  ///
+  /// [baseUrl] is the base URL for the API.
   RestDataProvider(this.baseUrl) : dio = Dio();
+
+  /// The base URL for the API.
   final String baseUrl;
+
+  /// The Dio instance used for making HTTP requests.
   final Dio dio;
 
   @override

@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
+/// A stateless widget that displays a welcome screen for the Lainisha Admin
+/// Framework. It includes buttons for navigating to documentation, examples,
+/// and community resources.
 class WelcomeScreen extends StatelessWidget {
+  /// Creates a [WelcomeScreen] widget.
   const WelcomeScreen({super.key});
 
   @override
@@ -20,21 +24,15 @@ class WelcomeScreen extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             ElevatedButton(
-              onPressed: () {
-                // Open documentation link
-              },
+              onPressed: () {},
               child: const Text('Documentation'),
             ),
             ElevatedButton(
-              onPressed: () {
-                // Open examples link
-              },
+              onPressed: () {},
               child: const Text('Examples'),
             ),
             ElevatedButton(
-              onPressed: () {
-                // Open community link
-              },
+              onPressed: () {},
               child: const Text('Community'),
             ),
           ],

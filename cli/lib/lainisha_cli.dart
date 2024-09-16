@@ -1,4 +1,5 @@
-/// lainisha_cli, CLI tool to setup Flutter projects with Lainisha Admin Framework
+/// lainisha_cli, CLI tool to setup Flutter projects with Lainisha Admin 
+/// Framework
 ///
 /// ```sh
 /// # activate lainisha_cli

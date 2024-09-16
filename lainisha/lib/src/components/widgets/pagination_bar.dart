@@ -1,14 +1,32 @@
 import 'package:flutter/material.dart';
 
+/// A widget that provides pagination controls for navigating through pages
+/// of data and changing the number of items displayed per page.
+///
+/// It includes buttons for navigating between pages and a dropdown for
+/// selecting the number of items per page.
 class PaginationBar extends StatelessWidget {
+  /// Creates a [PaginationBar] with the given [currentPage], [onPageChanged],
+  /// and [onLimitChanged] callback functions.
+  ///
+  /// [currentPage] is the current page number.
+  /// [onPageChanged] is a callback function to be called when the page changes.
+  /// [onLimitChanged] is a callback function to be called when the items per
+  /// page limit changes.
   const PaginationBar({
     required this.currentPage,
     required this.onPageChanged,
     required this.onLimitChanged,
     super.key,
   });
+
+  /// The current page number.
   final int currentPage;
+
+  /// Callback function triggered when the page is changed.
   final ValueChanged<int> onPageChanged;
+
+  /// Callback function triggered when the items per page limit is changed.
   final ValueChanged<int> onLimitChanged;
 
   @override
@@ -19,8 +37,9 @@ class PaginationBar extends StatelessWidget {
         Row(
           children: [
             IconButton(
-              onPressed:
-                  currentPage > 1 ? () => onPageChanged(currentPage - 1) : null,
+              onPressed: currentPage > 1
+                  ? () => onPageChanged(currentPage - 1)
+                  : null,
               icon: const Icon(Icons.chevron_left),
             ),
             Text('Page $currentPage'),
@@ -48,43 +67,3 @@ class PaginationBar extends StatelessWidget {
     );
   }
 }
-
-
-// import 'package:flutter/material.dart';
-
-// typedef PageChangedCallback = void Function(int page);
-
-// class PaginationBar extends StatelessWidget {
-//   const PaginationBar({
-//     required this.currentPage,
-//     required this.totalPages,
-//     required this.onPageChanged,
-//     super.key,
-//   });
-
-//   final int currentPage;
-//   final int totalPages;
-//   final PageChangedCallback onPageChanged;
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Row(
-//       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//       children: [
-//         ElevatedButton(
-//           onPressed: currentPage > 1
-//               ? () => onPageChanged(currentPage - 1)
-//               : null,
-//           child: const Text('Previous'),
-//         ),
-//         Text('Page $currentPage of $totalPages'),
-//         ElevatedButton(
-//           onPressed: currentPage < totalPages
-//               ? () => onPageChanged(currentPage + 1)
-//               : null,
-//           child: const Text('Next'),
-//         ),
-//       ],
-//     );
-//   }
-// }

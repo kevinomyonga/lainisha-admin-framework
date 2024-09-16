@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+/// Extension methods on [BuildContext] to simplify access to common media query
+/// and theme data properties. Provides methods for responsive design and
+/// theme-related information.
 extension ContextExt on BuildContext {
   /// The same of [MediaQuery.of(context).size]
   Size get mediaQuerySize => MediaQuery.of(this).size;
@@ -157,6 +160,7 @@ extension ContextExt on BuildContext {
   }) {
     assert(
       watch != null || mobile != null || tablet != null || desktop != null,
+      'At least one of watch, mobile, tablet, or desktop must be provided.',
     );
 
     final deviceWidth = mediaQuerySize.width;
